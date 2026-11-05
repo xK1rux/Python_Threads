@@ -20,8 +20,8 @@ def main():
             valores[j] = random.randint(1, 100)
         params[i] = (i + 1, valores)
 
-    with multiprocessing.Pool(processes=3) as pool:
-        pool.starmap(threads, params)
+    with multiprocessing.Pool(processes=3) as threads:
+        threads.starmap(threads, params)
 
 
 if __name__ == "__main__":
