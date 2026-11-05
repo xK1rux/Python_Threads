@@ -20,8 +20,8 @@ def main():
     for i in range(5):
         params[i] = (i + 1, distancia)
 
-    with multiprocessing.Pool(processes=5) as pool:
-        pool.starmap(threads, params)
+    with multiprocessing.Pool(processes=5) as threads:
+        threads.starmap(threads, params)
 
 
 if __name__ == "__main__":
